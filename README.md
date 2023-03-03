@@ -7,9 +7,9 @@
 
 *Pour info l'option -S permet d'installer la dependences dans l'objet dependencies sur package.json Si on utilise l'option -D ça se retrouve dans devDependencies.*
 
-2. Créer une fonction qui prends en paramètre un prénom et viens appeller l'endpoint suivant :
+2. Récupérer des utilisateurs via cette endpont :
 
-Endpoint d'API: 'https://reqres.in/api/users?page=1'
+https://reqres.in/api/users?page=1
 
 3. Récupérer un utilisateur portant le prénom "Janet" et typer la réponse reçu.
 
@@ -21,25 +21,25 @@ Endpoint d'API: 'https://reqres.in/api/users?page=1'
     
     
 
-4. Créer une fonction qui prend en paramètre un id et viens récuperer un objet Couleur
+4. En utilisant l'id de l'utilisateur, récupérer sa couleur via cette endpoint :
 
-Utilisez son "id" pour récupérer via cette endpoint "https://reqres.in/api/unknown/{id}" sa couleur.
-
-Typer la réponse reçu (la Couleur)
-Créer une fonction qui prends en parametre un utilisateur et une couleur et retourne un objet Person avec comme propriété :
-
-une couleur en hexa correctement typé (ex: "#BF1932")
-un nom comportant la concaténation du prénom et du nom
-son email
-Tester cette derniere fonction graçe à Jest
-
-    src/index.ts
-
-    import axios, {isCancel, AxiosError, AxiosResponse} from 'axios';
+https://reqres.in/api/unknown/{id}
 
 
-    const response: AxiosResponse<any[]> = await axios.get('https://reqres.in/api/users?page=1');
-    console.log(response.data)
+5. Typer la réponse reçu 
+
+
+6. Créer une fonction qui prends en parametre un utilisateur et une couleur et retourne un objet Person avec comme propriété :
+
+- une couleur en hexa correctement typé (ex: "#BF1932")
+- un nom comportant la concaténation du prénom et du nom
+- un email
+
+7. Tester cette derniere fonction graçe à Jest
+
+
+
+NB :
 
 package.json
 
