@@ -1,28 +1,27 @@
 # Exercice typescript Axios 
 
 
-Installer axios (librairie http)
+1. Installer axios (librairie http)
 
     npm i -S axios
 
-Pour info l'option -S permet d'installer la dependences dans l'objet dependencies sur package.json Si on utilise l'option -D ça se retrouve dans devDependencies.
+*Pour info l'option -S permet d'installer la dependences dans l'objet dependencies sur package.json Si on utilise l'option -D ça se retrouve dans devDependencies.*
 
-Créer une fonction qui prends en paramètre un prénom et viens appeller l'endpoint suivant :
+2. Créer une fonction qui prends en paramètre un prénom et viens appeller l'endpoint suivant :
 
 Endpoint d'API: 'https://reqres.in/api/users?page=1'
 
-Récupérer un utilisateur portant le prénom "Janet".
+3. Récupérer un utilisateur portant le prénom "Janet" et typer la réponse reçu.
 
-Typer la reponse reçu
-
-NB: avec axios :
 
     import axios, {AxiosResponse} from 'axios';
 
     //avec un await sinon utiliser .then(callback)
     const response: AxiosResponse<any[]> = await  axios.get({url})//renvoi une promesse
+    
+    
 
-Créer une fonction qui prend en paramètre un id et viens récuper un objet Couleur
+4. Créer une fonction qui prend en paramètre un id et viens récuperer un objet Couleur
 
 Utilisez son "id" pour récupérer via cette endpoint "https://reqres.in/api/unknown/{id}" sa couleur.
 
